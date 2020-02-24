@@ -18,7 +18,7 @@
 
 cd `dirname $0`
 
-echo "git clone and build Leaf project..."
+echo "git clone and build Leaf project(DupdateReleaseInfo=true)..."
 git clone https://github.com/Meituan-Dianping/Leaf
 cd Leaf
 mvn clean package install -DupdateReleaseInfo=true -Dmaven.test.skip=true -pl leaf-core 
