@@ -22,7 +22,7 @@ cd %~dp0
 echo git clone and build Leaf project...
 git clone https://github.com/Meituan-Dianping/Leaf
 cd Leaf
-call mvn clean package install -Dmaven.test.skip=true -pl leaf-core
+call mvn clean package install -DupdateReleaseInfo=true -Dmaven.test.skip=true -pl leaf-core
 cd ..
 
 echo build sharding-keygen-leaf project...

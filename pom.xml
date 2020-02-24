@@ -101,11 +101,11 @@
                 <artifactId>sharding-orchestration-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- dependency>
+            <dependency>
                 <groupId>com.sankuai.inf.leaf</groupId>
                 <artifactId>leaf-core</artifactId>
                 <version>${meituan.leaf.version}</version>
-            </dependency -->
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -343,10 +343,10 @@
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-orchestration-core</artifactId>
         </dependency>
-        <!-- dependency>
+        <dependency>
             <groupId>com.sankuai.inf.leaf</groupId>
             <artifactId>leaf-core</artifactId>
-        </dependency -->
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -449,9 +449,6 @@
                         <target>${java.version}</target>
                         <testSource>${java.version}</testSource>
                         <testTarget>${java.version}</testTarget>
-                        <compilerArguments>
-                            <extdirs>${project.basedir}/Leaf/leaf-core/target</extdirs>
-                        </compilerArguments>
                     </configuration>
                     <version>${maven-compiler-plugin.version}</version>
                 </plugin>
@@ -589,11 +586,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
-                <configuration>
-                    <additionalClasspathElements>
-                        <additionalClasspathElement>${project.basedir}/Leaf/leaf-core/target/leaf.jar</additionalClasspathElement>
-                    </additionalClasspathElements>
-                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
